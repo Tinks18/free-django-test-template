@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
+{% load i18n %}
+
 
 <div class="masthead">
     <div class="container">
@@ -41,6 +43,8 @@
                                 {% if liked %}
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
+
+                                
                                 {% else %}
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
                                         class="far fa-heart"></i></button>
