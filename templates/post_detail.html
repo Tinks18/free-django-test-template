@@ -41,8 +41,14 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
+
+                                <div class="alert alert-success" role="alert">
+                                    You have liked the post
+                                </div>
+
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
+                                 
 
                                 
                                 {% else %}
